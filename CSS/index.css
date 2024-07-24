@@ -1,20 +1,21 @@
-html, body {
+html,
+body {
     margin: 0;
     padding: 0;
-    height: 100%; /* Asegúrate de que html y body ocupen todo el alto de la ventana */
-    width: 100%;  /* Asegúrate de que html y body ocupen todo el ancho de la ventana */
+    height: 100%;
+    width: 100%;
     font-family: 'Dancing Script', cursive;
     background: black;
     color: white !important;
 }
 
 #particles-js {
-    position: absolute; /* Asegúrate de que el contenedor de partículas esté absolutamente posicionado */
+    position: absolute;
     top: 0;
     left: 0;
-    width: 100%; /* Ocupa todo el ancho de la ventana */
-    height: 100%; /* Ocupa todo el alto de la ventana */
-    z-index: 1; /* Asegúrate de que el contenedor esté debajo del contenido principal */
+    width: 100%;
+    height: 100%;
+    z-index: 1;
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
@@ -22,15 +23,18 @@ html, body {
 }
 
 #particles-js2 {
-    position: fixed; /* Usa fixed en lugar de absolute para asegurar que se mantenga en su lugar */
+    position: fixed;
     top: 0;
     left: 0;
-    width: 100vw; /* Usa vw en lugar de % para asegurar que ocupe el ancho total de la ventana */
-    height: 100vh; /* Usa vh en lugar de % para asegurar que ocupe el alto total de la ventana */
-    z-index: -1; /* Coloca el contenedor detrás del contenido principal */
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
 }
 
-.principal, .secundario, .secundario-Mapa {
+.principal,
+.secundario,
+.secundario-Mapa,
+.secundario-Recepcion {
     margin: 0 auto;
     width: 80%;
     max-width: 1200px;
@@ -67,7 +71,7 @@ html, body {
 }
 
 .principal .titulo h1 {
-    color: #FF1493;
+    color: #ffcce7;
     font-size: 48px;
 }
 
@@ -216,7 +220,8 @@ html, body {
 
 .secundario-Mapa {
     position: relative;
-    border: 2px solid #FF1493; /* Primer borde */
+    border: 2px solid #FF1493;
+    /* Primer borde */
     background: rgb(58 58 58 / 55%);
     backdrop-filter: blur(4px);
     margin-top: 25px;
@@ -227,21 +232,26 @@ html, body {
 .secundario-Mapa::before {
     content: '';
     position: absolute;
-    top: -4px; /* Ajusta estos valores según necesites */
+    top: -4px;
+    /* Ajusta estos valores según necesites */
     left: -4px;
     right: -4px;
     bottom: -4px;
-    border: 2px solid #FF1493; /* Segundo borde */
-    border-radius: inherit; /* Para mantener el borde redondeado si es necesario */
-    z-index: -1; /* Asegúrate de que esté detrás del contenido */
+    border: 2px solid #FF1493;
+    /* Segundo borde */
+    border-radius: inherit;
+    /* Para mantener el borde redondeado si es necesario */
+    z-index: -1;
+    /* Asegúrate de que esté detrás del contenido */
 }
 
 h1.ceremonia {
     font-size: 125px;
+    margin-bottom: 0px;
 }
 
 img.iglesia {
-    width: 300px;
+    width: 150px;
 }
 
 h1.hora {
@@ -253,12 +263,18 @@ h1.parroquia {
 }
 
 #map {
-    height: 400px; /* Ajusta la altura según sea necesario */
-    width: 100%; /* Ocupa todo el ancho del contenedor */
-    border: 2px solid #FF1493; /* Borde que coincide con el estilo general */
-    border-radius: 10px; /* Bordes redondeados para combinar con el estilo */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Agrega una sombra para dar profundidad */
-    margin: 20px auto; /* Centra el mapa y agrega un margen superior e inferior */
+    height: 400px;
+    /* Ajusta la altura según sea necesario */
+    width: 100%;
+    /* Ocupa todo el ancho del contenedor */
+    border: 2px solid #FF1493;
+    /* Borde que coincide con el estilo general */
+    border-radius: 10px;
+    /* Bordes redondeados para combinar con el estilo */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Agrega una sombra para dar profundidad */
+    margin: 20px auto;
+    /* Centra el mapa y agrega un margen superior e inferior */
 }
 
 .llegar {
@@ -278,10 +294,465 @@ h1.parroquia {
 }
 
 .icon-container {
-    margin-right: 8px; /* Espacio entre la imagen y el texto */
+    margin-right: 8px;
+    /* Espacio entre la imagen y el texto */
 }
 
 .icono {
-    width: 20px; /* Ajusta el tamaño de la imagen según sea necesario */
+    width: 20px;
+    /* Ajusta el tamaño de la imagen según sea necesario */
     height: 20px;
+}
+
+.btn {
+    height: 4em;
+    width: 12em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    border: 0px solid black;
+    cursor: pointer;
+    margin-left: 40%;
+    margin-top: 20px;
+}
+
+.wrapper {
+    height: 2em;
+    width: 8em;
+    position: relative;
+    background: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.text {
+    font-size: 17px;
+    z-index: 1;
+    color: #000;
+    padding: 4px 12px;
+    border-radius: 4px;
+    background: rgba(255, 255, 255, 0.7);
+    transition: all 0.5s ease;
+}
+
+.flower {
+    display: grid;
+    grid-template-columns: 1em 1em;
+    position: absolute;
+    transition: grid-template-columns 0.8s ease;
+}
+
+.flower1 {
+    top: -12px;
+    left: -13px;
+    transform: rotate(5deg);
+}
+
+.flower2 {
+    bottom: -5px;
+    left: 8px;
+    transform: rotate(35deg);
+}
+
+.flower3 {
+    bottom: -15px;
+    transform: rotate(0deg);
+}
+
+.flower4 {
+    top: -14px;
+    transform: rotate(15deg);
+}
+
+.flower5 {
+    right: 11px;
+    top: -3px;
+    transform: rotate(25deg);
+}
+
+.flower6 {
+    right: -15px;
+    bottom: -15px;
+    transform: rotate(30deg);
+}
+
+.petal {
+    height: 1em;
+    width: 1em;
+    border-radius: 40% 70% / 7% 90%;
+    background: linear-gradient(#07a6d7, #93e0ee);
+    border: 0.5px solid #96d1ec;
+    z-index: 0;
+    transition: width 0.8s ease, height 0.8s ease;
+}
+
+.two {
+    transform: rotate(90deg);
+}
+
+.three {
+    transform: rotate(270deg);
+}
+
+.four {
+    transform: rotate(180deg);
+}
+
+.btn:hover .petal {
+    background: linear-gradient(#0761d7, #93bdee);
+    border: 0.5px solid #96b4ec;
+}
+
+.btn:hover .flower {
+    grid-template-columns: 1.5em 1.5em;
+}
+
+.btn:hover .flower .petal {
+    width: 1.5em;
+    height: 1.5em;
+}
+
+.btn:hover .text {
+    background: rgba(255, 255, 255, 0.4);
+}
+
+.btn:hover div.flower1 {
+    animation: 15s linear 0s normal none infinite running flower1;
+}
+
+@keyframes flower1 {
+    0% {
+        transform: rotate(5deg);
+    }
+
+    100% {
+        transform: rotate(365deg);
+    }
+}
+
+.btn:hover div.flower2 {
+    animation: 13s linear 1s normal none infinite running flower2;
+}
+
+@keyframes flower2 {
+    0% {
+        transform: rotate(35deg);
+    }
+
+    100% {
+        transform: rotate(-325deg);
+    }
+}
+
+.btn:hover div.flower3 {
+    animation: 16s linear 1s normal none infinite running flower3;
+}
+
+@keyframes flower3 {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.btn:hover div.flower4 {
+    animation: 17s linear 1s normal none infinite running flower4;
+}
+
+@keyframes flower4 {
+    0% {
+        transform: rotate(15deg);
+    }
+
+    100% {
+        transform: rotate(375deg);
+    }
+}
+
+.btn:hover div.flower5 {
+    animation: 20s linear 1s normal none infinite running flower5;
+}
+
+@keyframes flower5 {
+    0% {
+        transform: rotate(25deg);
+    }
+
+    100% {
+        transform: rotate(-335deg);
+    }
+}
+
+.btn:hover div.flower6 {
+    animation: 15s linear 1s normal none infinite running flower6;
+}
+
+@keyframes flower6 {
+    0% {
+        transform: rotate(30deg);
+    }
+
+    100% {
+        transform: rotate(390deg);
+    }
+}
+
+.secundario-Recepcion {
+    border: 2px solid #FF1493;
+    background: rgb(104 104 104 / 32%);
+    backdrop-filter: blur(4px);
+    position: relative;
+    top: 0;
+    z-index: 2;
+    margin-top: 25px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.recepcion {
+    font-size: 125px;
+    margin-bottom: 0px;
+}
+
+.salon {
+    width: 250px;
+}
+
+.hora,
+.direccion {
+    font-size: 1.2em;
+    margin-top: 10px;
+}
+
+.direccion {
+    font-size: 2em;
+    margin-top: 10px;
+}
+
+.salonNombre {
+    font-size: 85px;
+}
+
+#map-recepcion {
+    height: 400px;
+    width: 100%;
+    border: 2px solid #FF1493;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+
+.hrFino {
+    border: 1px solid #FF1493;
+    width: 40%;
+}
+
+.vestimenta {
+    text-align: center;
+}
+
+.etiqueta {
+    font-size: 35px;
+}
+
+.hombre {
+    width: 380px;
+    border: 2px solid #FF1493;
+    margin-right: 50px;
+}
+
+.mujer {
+    width: 383px;
+    border: 2px solid #FF1493;
+    margin-left: 50px;
+}
+
+.esperamos {
+    text-align: center;
+}
+
+.tituloEspera {
+    font-size: 125px;
+}
+
+h2.asistencia {
+    font-size: 30px;
+}
+
+
+.button2 {
+    display: inline-block;
+    transition: all 0.2s ease-in;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    color: #090909;
+    padding: 0.7em 3.3em 0.7em 1.7em;
+    font-size: 18px;
+    border-radius: 0.5em;
+    background: #e8e8e8;
+    border: 1px solid #e8e8e8;
+    box-shadow: 6px 6px 12px #c5c5c554, -6px -6px 12px #ffffff3d;
+    margin-right: 50px;
+    margin-left: 50px;
+}
+
+.button2>svg {
+    height: 30px;
+    position: absolute;
+    padding: 0px 5px;
+    margin-top: -4px;
+}
+
+.button2:active {
+    color: #666;
+    box-shadow: inset 4px 4px 12px #c5c5c5,
+        inset -4px -4px 12px #ffffff;
+}
+
+.button2:before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%) scaleY(1) scaleX(1.25);
+    top: 100%;
+    width: 140%;
+    height: 180%;
+    background-color: rgba(0, 0, 0, 0.05);
+    border-radius: 50%;
+    display: block;
+    transition: all 0.5s 0.1s cubic-bezier(0.55, 0, 0.1, 1);
+    z-index: -1;
+}
+
+.button2:after {
+    content: "";
+    position: absolute;
+    left: 55%;
+    transform: translateX(-50%) scaleY(1) scaleX(1.45);
+    top: 180%;
+    width: 160%;
+    height: 190%;
+    background-color: #009087;
+    border-radius: 50%;
+    display: block;
+    transition: all 0.5s 0.1s cubic-bezier(0.55, 0, 0.1, 1);
+    z-index: -1;
+}
+
+.button2:hover {
+    color: #ffffff;
+    border: 1px solid #009087;
+}
+
+.button2:hover:before {
+    top: -35%;
+    background-color: #009087;
+    transform: translateX(-50%) scaleY(1.3) scaleX(0.8);
+}
+
+.button2:hover:after {
+    top: -45%;
+    background-color: #ff14919d;
+    transform: translateX(-50%) scaleY(1.3) scaleX(0.8);
+}
+
+
+@media screen and (max-width: 600px) {
+
+    .principal,
+    .secundario,
+    .secundario-Mapa {
+        width: 99%;
+        margin-top: 15px;
+    }
+
+    .nombre {
+        width: 200px;
+        height: 252px;
+    }
+
+    .nombreInv {
+        font-size: 80px;
+    }
+
+    .principal {
+        padding-top: 0px;
+    }
+
+    .mes,
+    .ano {
+        font-size: 40px;
+    }
+
+    .custom-audio {
+        width: 90%;
+    }
+
+    .textoInv {
+        width: 90%;
+        font-size: 25px;
+    }
+
+    h1.ceremonia {
+        font-size: 55px;
+    }
+
+    img.iglesia {
+        width: 155px;
+    }
+
+    h1.hora {
+        font-size: 40px;
+    }
+
+    h1.parroquia {
+        font-size: 40px;
+    }
+
+    h1.direccion {
+        font-size: 20px;
+    }
+
+    .btn {
+        margin-left: 27%;
+    }
+
+    .secundario-Recepcion {
+        width: 95%;
+    }
+
+    .recepcion {
+        font-size: 65px;
+    }
+
+    .hombre {
+        margin-right: 0px;
+    }
+
+    .mujer {
+        margin-left: 0px;
+        margin-top: 10px;
+    }
+
+    .hrFino {
+        width: 75%;
+    }
+
+    .tituloEspera {
+        font-size: 60px;
+    }
+
+    .button2 {
+        margin-right: 0px;
+        margin-left: 0px;
+        margin-bottom: 25px;
+    }
 }

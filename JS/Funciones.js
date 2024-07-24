@@ -207,3 +207,20 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 L.marker([19.6538695, -99.0963257]).addTo(map)
     .bindPopup('Parroquia de nuestra señora de Guadalupe')
     .openPopup();
+
+
+
+
+var map = L.map('map-recepcion').setView([19.6309969, -99.1030245], 15); // Coordenadas aproximadas para Coacalco
+
+// Agrega una capa de mapa desde OpenStreetMap
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    maxZoom: 19,
+    attribution: '© OpenStreetMap contributors'
+}).addTo(map);
+
+// Marca la ubicación en el mapa
+L.marker([19.6309969, -99.1030245]).addTo(map)
+    .bindPopup('Salón los olivos')
+    .openPopup();
+
